@@ -20,7 +20,7 @@ cit$year = paste("Y",cit$year,sep="")
 # Updates Google spreadsheets, which updates the citations graph on my website!
 if (length(cit$year)>0){
 	library(googlesheets)
-	citations.url="https://docs.google.com/spreadsheets/d/1MhrkS2uH9D1cZ7RXcK3Cyyjy8baZqFywrVa6zYJ0tng/edit?usp=sharing"
+	citations.url="https://docs.google.com/spreadsheets/d/1rsj3Q_9LIJ6pjMcgbUNnecLYnpUubyWX_8lE7MllZiU/edit?usp=sharing"
 	citations=gs_url(citations.url,lookup=T,visibility = "private")
 	gs_edit_cells(citations,ws="citations",input=cit,anchor = "A2",col_names = FALSE)
 	writeLines("[Success!]\tYour Google sheet was updated!")
