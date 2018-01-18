@@ -14,7 +14,7 @@
 # Gets citations from Google Scholar
 library(scholar)
 # Google Scholar ID
-user = "VII2oEQAAAAJ"
+user = "lWsYRH8AAAAJ&hl"
 cit = get_citation_history(user)
 cit$year = paste("Y",cit$year,sep="")
 # Updates Google spreadsheets, which updates the citations graph on my website!
